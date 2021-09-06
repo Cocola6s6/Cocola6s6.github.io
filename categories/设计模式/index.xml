@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>设计模式 on Cocloa is looking at the Piano</title>
+    <link>https://cocola6s6.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
+    <description>Recent content in 设计模式 on Cocloa is looking at the Piano</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 04 Jul 2020 20:36:08 +0800</lastBuildDate><atom:link href="https://cocola6s6.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>桥接模式</title>
+      <link>https://cocola6s6.github.io/%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/</link>
+      <pubDate>Sat, 04 Jul 2020 20:36:08 +0800</pubDate>
+      
+      <guid>https://cocola6s6.github.io/%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/</guid>
+      <description>合成、聚合复用原则 “在面向对象设计中，有一个很重要的设计原则，那就是合成/聚合复用原则。即优先使用对象合成/聚合，而不是类继承。” - 继承带来的坏处： 很多情况用继承会带来麻烦，比如：对象的继承关系是在编译时就定义好了，所以无法在运行时改变从父类继承的实现。子类的实现与它的父类有非常紧密的依赖关系，以至</description>
+    </item>
+    
+    <item>
+      <title>责任链模式</title>
+      <link>https://cocola6s6.github.io/%E8%B4%A3%E4%BB%BB%E9%93%BE%E6%A8%A1%E5%BC%8F/</link>
+      <pubDate>Tue, 30 Jun 2020 21:12:48 +0800</pubDate>
+      
+      <guid>https://cocola6s6.github.io/%E8%B4%A3%E4%BB%BB%E9%93%BE%E6%A8%A1%E5%BC%8F/</guid>
+      <description>责任链模式 一、为什么？ 职责链模式(Chain of Responsibility)：使多个对象都有机会处理请求，从而避免请求的发送者和接收者之间的耦合关系。将这个对象连成一条链， 并沿着这条链传递该请求，直到有一个对象处理它为止。 “这里发出这个请求的客户端并不知道这当中的哪一个对象最终处理这个请求，这样系统</description>
+    </item>
+    
+    <item>
+      <title>中介者模式</title>
+      <link>https://cocola6s6.github.io/%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F/</link>
+      <pubDate>Sat, 27 Jun 2020 21:44:09 +0800</pubDate>
+      
+      <guid>https://cocola6s6.github.io/%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F/</guid>
+      <description>一、为什么？ MVC 模式，C（Controller控制器）是 M（Model模型）和 V（View视图）的中介者，在前后端交互时起到了中间人的作用。 如果大量的连接使得一个对象不可能在没有其他对象的支持下工作，系统表现为一个不可分割的整体，这对系统的行为进行任何较大的改动就十分困难了。 二、中介者模式 中介者模式 (</description>
+    </item>
+    
+    <item>
+      <title>装饰者模式</title>
+      <link>https://cocola6s6.github.io/%E8%A3%85%E9%A5%B0%E8%80%85%E6%A8%A1%E5%BC%8F/</link>
+      <pubDate>Mon, 22 Jun 2020 21:05:14 +0800</pubDate>
+      
+      <guid>https://cocola6s6.github.io/%E8%A3%85%E9%A5%B0%E8%80%85%E6%A8%A1%E5%BC%8F/</guid>
+      <description>一、为什么？ 搭配衣服的时候，我们往往会有多种搭配方式。我们人自己是主体，而衣服是装饰，可以有根据不同情况而有多种选择。 喝奶茶的时候，我们往往也有多种加料方式。 与建筑者模式不同的是，建筑的过程是稳定的；这里来说，如果衣服的搭配是稳定的就会，搭配方式1（大T恤、大跨库）和搭配方式2（小T恤、小垮裤）等。</description>
+    </item>
+    
+    <item>
+      <title>建筑者模式</title>
+      <link>https://cocola6s6.github.io/%E5%BB%BA%E7%AD%91%E8%80%85%E6%A8%A1%E5%BC%8F/</link>
+      <pubDate>Tue, 09 Jun 2020 09:37:11 +0800</pubDate>
+      
+      <guid>https://cocola6s6.github.io/%E5%BB%BA%E7%AD%91%E8%80%85%E6%A8%A1%E5%BC%8F/</guid>
+      <description>建筑者模式 一、为什么 我不理，既然都有了高的小人，那你顺便给我再加一个胖的。 你仔细分析会发现，这里建造小人的‘过程’ 是稳定的，都需要头身手脚，而具体建造的‘细节’是不同的，有胖有瘦有高有矮。但对于用户来讲，我才不管这些，我只想告诉你，我需要一个胖小人来游戏，于是你就建造一一个给我就行了。 如果你需要将一</description>
+    </item>
+    
+    <item>
+      <title>外观模式</title>
+      <link>https://cocola6s6.github.io/%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F/</link>
+      <pubDate>Mon, 08 Jun 2020 08:52:22 +0800</pubDate>
+      
+      <guid>https://cocola6s6.github.io/%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F/</guid>
+      <description>外观模式 一、为什么？ 经典的三层架构，在数据访问层和业务逻辑层、业务逻辑层和表示层的层与层之间建立外观类Facade，这样可以为复杂的子系统提供一个 简单的接口，使得耦合大大降低。 还有，子系统往往因为不断的重构演化而变得越来越复杂，大多数的模式使用时也都会产生很多很小的类，这本是 好事，但也给外部调用它们</description>
+    </item>
+    
+    <item>
+      <title>单例模式2</title>
+      <link>https://cocola6s6.github.io/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F2/</link>
+      <pubDate>Fri, 05 Jun 2020 16:55:55 +0800</pubDate>
+      
+      <guid>https://cocola6s6.github.io/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F2/</guid>
+      <description>单例模式2 为什么？ 我们在编程中最常用的模式就是单例模式了，然而单例模式都用在什么场合？ 为什么不用静态方法而要用单例模式呢？ 要搞清这些问题，需要从静态方法和非静态方法的区别和联系说起。 一、静态方法常驻内存，非静态方法只有使用的时候才分配内存吗？ 一般都认为是这样，并且怕静态方法占用过多内存而建议使用非静</description>
+    </item>
+    
+    <item>
+      <title>单例模式</title>
+      <link>https://cocola6s6.github.io/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</link>
+      <pubDate>Fri, 05 Jun 2020 16:54:51 +0800</pubDate>
+      
+      <guid>https://cocola6s6.github.io/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</guid>
+      <description>单例模式 一、为什么？ “写一个MDI窗体程序，当中有一个是‘工具箱’的窗体，问题就是，我希望工具箱要么不出现，出现也只出现一个，可实际上却是我每点击菜单，实例化‘工具箱’，它就会出来一个，这样点击多次就会出现很多个‘工具箱’，你说怎么办?” 二、责任问题 一般情况下为了方便，工具箱&#39; FormToolbox</description>
+    </item>
+    
+    <item>
+      <title>观察者模式</title>
+      <link>https://cocola6s6.github.io/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/</link>
+      <pubDate>Thu, 04 Jun 2020 13:51:50 +0800</pubDate>
+      
+      <guid>https://cocola6s6.github.io/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/</guid>
+      <description>观察者模式 一、为什么？ 如何在老板不在时开小差又不被发现？于是就请前台的小美帮忙，如果老板出门后回来，就打个电话进来，大家也好马上各就各位，这样就不会被老板发现问题了。 ”观察者模式的关键对象是主题Subject和观察者Observer；**一个Subject可以有任意数目的依赖它Observer，一旦</description>
+    </item>
+    
+    <item>
+      <title>工厂方法模式</title>
+      <link>https://cocola6s6.github.io/%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/</link>
+      <pubDate>Thu, 04 Jun 2020 13:04:12 +0800</pubDate>
+      
+      <guid>https://cocola6s6.github.io/%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/</guid>
+      <description>工厂方法模式 一、为什么？ ​ 简单工厂模式引入”工厂“类只是解决对象的创建问题，将对象的创建交给了“工厂”；对象多了，工厂也就拥挤了。于是，为了改变工厂拥挤的问题，有了工厂方法模式。 工厂方法模式和简单工厂的区别所在： 简单工厂模式的最大优点在于工厂类中包含了必要的逻辑判断，根据客户端的选择条件动态实例化相</description>
+    </item>
+    
+    <item>
+      <title>策略模式结合简单工厂模式</title>
+      <link>https://cocola6s6.github.io/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F%E7%BB%93%E5%90%88%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</link>
+      <pubDate>Wed, 03 Jun 2020 13:33:09 +0800</pubDate>
+      
+      <guid>https://cocola6s6.github.io/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F%E7%BB%93%E5%90%88%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</guid>
+      <description>策略模式与简单工厂模式结合 一、为什么？ “难道简单工厂就一定要是一个单独的类吗?难道不可以与策略模式的Context结合?” 于是，将客户端判断代码搬运到Context构造器中，客户端传入需要的”收费方式字符串“就可以了。 二、策略模式与简单工厂模式结合 1）Context类代码： class CashContext { CashSuper cs = null; public CashContext(string type) { switch (type)</description>
+    </item>
+    
+    <item>
+      <title>策略模式</title>
+      <link>https://cocola6s6.github.io/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/</link>
+      <pubDate>Wed, 03 Jun 2020 13:30:04 +0800</pubDate>
+      
+      <guid>https://cocola6s6.github.io/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/</guid>
+      <description>策略模式 一、为什么？ 商场收银时如何促销，用打折还是返利，其实都是一些算法，用工厂来生成算法对象，这没有错，但算法本身只是一种策略，最重要的是这些算法是随时都可能互相替换的，这就是变化点，而封装变化点是我们面向对象的一种 很重要的思维方式。 简单工厂模式只是解决对象的创建问题，由于“工厂”本身包括了所有的</description>
+    </item>
+    
+    <item>
+      <title>简单工厂模式</title>
+      <link>https://cocola6s6.github.io/%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</link>
+      <pubDate>Wed, 03 Jun 2020 13:10:10 +0800</pubDate>
+      
+      <guid>https://cocola6s6.github.io/%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</guid>
+      <description>简单工厂模式 一、为什么？ “比如增加开根运算，运算类是很容易变化的地方，应该考虑用一个单独的类来做这个创造实例的过程——工厂“； 顾名思义：工厂就是用来造东西的，市面上的东西，购买时我们完全不知道它是如何生产的，但是我们就可以直接购买，这就是工厂方法模式 。 二、简单工厂模式 1）工厂类代码： public class OperationFactory { public static Operation creatieOperate()</description>
+    </item>
+    
+  </channel>
+</rss>

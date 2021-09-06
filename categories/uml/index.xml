@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>UML on Cocloa is looking at the Piano</title>
+    <link>https://cocola6s6.github.io/categories/uml/</link>
+    <description>Recent content in UML on Cocloa is looking at the Piano</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 09 Dec 2019 20:56:50 +0800</lastBuildDate><atom:link href="https://cocola6s6.github.io/categories/uml/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2号杯</title>
+      <link>https://cocola6s6.github.io/2%E5%8F%B7%E6%9D%AF/</link>
+      <pubDate>Mon, 09 Dec 2019 20:56:50 +0800</pubDate>
+      
+      <guid>https://cocola6s6.github.io/2%E5%8F%B7%E6%9D%AF/</guid>
+      <description>惊！ 2019年12月09日，比悲伤更悲伤的故事发生了啊 1000奖金去火锅，没有我，😔 官宣，可惜不是我，😔 广告：作文征集 明天有素材？后天有素材？期待你们的分享😄 联系方式：QQ“绿色健康小清新” 目标 依赖关系和包含关系；依赖关系和关联关系时类图最常见的关系，不能区分关系就会使得一整个类图都是同一种关系，很</description>
+    </item>
+    
+    <item>
+      <title>UML关系</title>
+      <link>https://cocola6s6.github.io/uml%E5%85%B3%E7%B3%BB/</link>
+      <pubDate>Sun, 08 Dec 2019 22:05:28 +0800</pubDate>
+      
+      <guid>https://cocola6s6.github.io/uml%E5%85%B3%E7%B3%BB/</guid>
+      <description>所有的 实例方法 都是 静态方法 —— 底层内核根本就没有 “实例方法” 这个概念。 所以：只要不是 架构层的东西，能用静态方法就用静态方法。 区别在于，静态方法的内存常驻；非静态的有机会释放。 用例图常用关系 包含关系与泛化关系的区分： 不复杂的理解，举个例子：制作奶茶； 所以2是1的包含；3是1的泛化；4是1的扩展； 用例1</description>
+    </item>
+    
+  </channel>
+</rss>

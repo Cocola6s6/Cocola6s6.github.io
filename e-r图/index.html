@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
+    <title>E-R图 - Cocloa is looking at the Piano</title>
+
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <link rel='stylesheet' href='https://cocola6s6.github.io/css/style.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='https://cocola6s6.github.io/css/custom.css' type='text/css' media='all' />
+        
+</head>
+    <body class="two-column">
+        <a href="#content">Skip to content</a>
+<div class="wrapper">
+    <header role="banner" class="banner widgets columns-1">
+        <a href="/" rel="home">
+            <h1 class="site">Cocloa is looking at the Piano</h1>
+            <p></p>
+        </a>
+        <nav role="navigation" aria-label="Primary Navigation">
+
+            <ul class="menu">
+                <li class="menu-item "><a class="menu__link" href="https://cocola6s6.github.io/keeping/">KEEPING</a></li>
+            </ul>
+            <select onChange="location.href=value;">
+                <option value="https://cocola6s6.github.io/keeping/" class="menu-item menu-item-type-custom menu-item-object-custom" >KEEPING</option>
+            </select>
+        </nav>
+    </header>
+
+    <br>
+    <div style="width: 100%; max-height: 100px; text-align: center;">
+       
+</div>
+
+    <div class="breadcrumbs">
+        
+    </div>
+        <div id="content" class="content">
+
+<main role="main">
+    <article role="article" class="post type-post format-standard hentry">
+        <header class="post-header">
+            <h1>E-R图</h1>
+            <div class="post-details">
+                <a rel="bookmark">
+                    <time datetime="2019-12-02T122:939:366">2019-12-02</time>
+                </a>
+				
+<span style="float: right;">
+    <div id="fb-root" style="height: 100%;"></div>
+    
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
+    
+    <div class="fb-share-button" data-href="https://cocola6s6.github.io/e-r%E5%9B%BE/" data-layout="button_count" data-size="small">
+        <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fcocola6s6.github.io%2fe-r%25E5%259B%25BE%2f" class="fb-xfbml-parse-ignore">Share</a>
+    </div>
+    &nbsp;
+    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="E-R图" data-url="https://cocola6s6.github.io/e-r%E5%9B%BE/" data-show-count="false">Tweet</a>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    &nbsp;
+    
+</span>
+
+            </div>
+        </header>
+
+        <div class="post-content">
+            <h2 id="用户">用户：</h2>
+<ul>
+<li>
+<p>用户可以对已完成订单发表评论；</p>
+</li>
+<li>
+<p>用户可以搜索想买的商品，想要预定的酒店和交通工具等；</p>
+</li>
+<li>
+<p>用户可以有多个订单，每个订单对应于一个收货地址；</p>
+</li>
+<li>
+<p>商品类型包括酒店、机票、车票、旅游景点；</p>
+</li>
+<li>
+<p>用户拥有添加多个地址信息作为收货地址；</p>
+</li>
+<li>
+<p>用户还可以收藏自己喜欢的酒店、景点；</p>
+</li>
+<li>
+<p>每个用户购买的商品还能有服务；</p>
+</li>
+<li>
+<p>一个订单可以有多个商品；</p>
+</li>
+<li>
+<p>每个用户只有一个登陆账号和注册一个登陆账号；每个账号可以绑定多个外联账号；</p>
+</li>
+<li>
+<p>一个管理员可以管理多个用户，一个用户可以由多个管理员管理</p>
+</li>
+<li></li>
+</ul>
+<p>N:M：管理员和用户、订单和商品、商品和收藏夹</p>
+<p>1：N：用户和订单</p>
+<p>1：1：用户和收藏夹</p>
+<h2 id="实体">实体</h2>
+<h4 id="用户订单商品商品类型收藏夹管理员">用户、订单、商品、（商品类型）、收藏夹、管理员</h4>
+<p>实体和属性区分的原则之一：属性不能和其它实体有联系</p>
+<h5 id="商品的商品类型与其他实体有联系吗与用户订单等全都没关系所以商品类型为商品的属性">商品的商品类型与其他实体有联系吗？与用户、订单等全都没关系，所以商品类型为商品的属性</h5>
+<h3 id="实体的关系模式111n时关系模式中包含了联系">实体的关系模式：（1:1、1:N时关系模式中包含了联系）</h3>
+<p>用户（<!-- raw HTML omitted -->用户编号<!-- raw HTML omitted -->、用户名、密码、性别、邮箱）</p>
+<p>订单（<!-- raw HTML omitted -->订单编号<!-- raw HTML omitted -->、用户编号、下单时间、订单状态、商品数量）</p>
+<p>商品（<!-- raw HTML omitted -->商品编号<!-- raw HTML omitted -->、商品名称、商品价格、商品数量、商品类型）</p>
+<p>收藏夹（<!-- raw HTML omitted -->收藏夹编号<!-- raw HTML omitted -->、用户编号、商品编号、商品名称）</p>
+<p>管理员（<!-- raw HTML omitted -->管理员编号<!-- raw HTML omitted -->、管理员名称、电话）</p>
+<h3 id="联系的关系模式nm时要写出联系的关系模式">联系的关系模式：（N：M时要写出联系的关系模式）</h3>
+<p>管理（<!-- raw HTML omitted -->用户编号<!-- raw HTML omitted -->、<!-- raw HTML omitted -->管理员编号<!-- raw HTML omitted -->）</p>
+<p>包含（<!-- raw HTML omitted -->订单编号<!-- raw HTML omitted -->、<!-- raw HTML omitted -->商品编号<!-- raw HTML omitted -->、订单数量）</p>
+<p>存放（<!-- raw HTML omitted -->商品编号<!-- raw HTML omitted -->、<!-- raw HTML omitted -->收藏夹编号<!-- raw HTML omitted -->、存放量）</p>
+<hr>
+<p>包含和存放这两个联系有自己的属性，作为获选码出现；但是并不是每个联系都会有属性，</p>
+<p><strong>例如：</strong></p>
+<ul>
+<li>用户和管理员，用户被管理员“管理”什么也不会发生；</li>
+<li>学生和课程，学生”选修“课程就会有成绩，成绩即作为联系而出现的属性。</li>
+</ul>
+<h2 id="er图">ER图</h2>
+<p><img src="https://onlythepiano.github.io/images/%E6%97%85%E6%B8%B8%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9FER%E5%9B%BE.png" alt="旅游推荐系统ER图">
+<img src="https://onlythepiano.github.io/images/%E7%94%A8%E6%88%B7.png" alt="用户">
+<img src="https://onlythepiano.github.io/images/%E8%AE%A2%E5%8D%95.png" alt="订单">
+<img src="https://onlythepiano.github.io/images/%E5%95%86%E5%93%81.png" alt="商品">
+<img src="https://onlythepiano.github.io/images/%E6%94%B6%E8%97%8F%E5%A4%B9.png" alt="收藏夹">
+<img src="https://onlythepiano.github.io/images/%E7%AE%A1%E7%90%86%E5%91%98.png" alt="管理员"></p>
+
+        </div>
+
+
+
+        <footer class="post-footer">
+                
+                
+                
+                <span class="post-categories">
+                        <a href="https://cocola6s6.github.io/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/">软件工程</a>&emsp;
+                        
+                </span>
+                
+        
+                
+                
+                
+        </footer>
+        
+<table cellspacing="15" style="width:100%; border: none;">
+    <tr>
+        <td style="text-align: center; border: none; padding: 0px;">
+        </td>
+        <td style="text-align: center; border: none; padding: 0px;">
+        </td>
+    </tr>
+</table>
+
+        
+	
+	
+
+    </article>
+
+    
+    <nav class="navigation post-navigation" role="navigation">
+        <div class="nav-links">
+            <div class="nav-previous">
+                
+            </div>
+            <div class="nav-next">
+                
+                <a class="next" href="https://cocola6s6.github.io/git%E5%91%BD%E4%BB%A4%E5%88%86%E6%94%AF%E5%90%88%E5%B9%B6/"> Git命令分支合并</a>
+                
+            </div>
+        </div>
+    </nav>
+    <section>
+        
+    </section>
+    
+
+</main>
+
+
+        <div class="sidebar1 widgets columns-1">
+
+    <aside>
+    
+</aside>
+    <aside class="widget widget_categories">
+        <h2>Categories</h2>
+        <ul class="widget__list"><li class="cat-item cat-item-2">
+                <a href="https://cocola6s6.github.io/categories/git/">Git (9)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://cocola6s6.github.io/categories/hugo/">Hugo (2)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://cocola6s6.github.io/categories/java/">Java (18)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://cocola6s6.github.io/categories/mysql/">MySQL (9)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://cocola6s6.github.io/categories/uml/">UML (2)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://cocola6s6.github.io/categories/%E5%8F%AF%E4%B9%90/">可乐 (8)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://cocola6s6.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构 (2)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://cocola6s6.github.io/categories/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/">离散数学 (1)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://cocola6s6.github.io/categories/%E7%AE%97%E6%B3%95/">算法 (1)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://cocola6s6.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式 (13)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://cocola6s6.github.io/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/">软件工程 (2)</a>
+            </li>
+        </ul>
+    </aside>
+
+    <aside class="widget widget_tag_cloud">
+        <h2>Tags</h2>
+        <div class="tagcloud"><a class="tag-cloud-link" href="https://cocola6s6.github.io/tags/out-of-mess/" title="out-of-mess" style="font-size: 12pt;">out of mess</a>&emsp;<a class="tag-cloud-link" href="https://cocola6s6.github.io/tags/out-of-messy/" title="out-of-messy" style="font-size: 12pt;">out of messy</a>&emsp;
+        </div>
+    </aside>
+
+    <aside class="widget widget_recent_entries">
+        <h2>Recent Posts</h2>
+        <ul>
+            <li>
+                <a href="/%E6%B3%9B%E5%9E%8B/">泛型</a>
+            </li>
+            <li>
+                <a href="/8%E5%8F%B7%E6%9D%AF/">8号杯</a>
+            </li>
+            <li>
+                <a href="/java%E5%9F%BA%E7%A1%80%E7%B1%BB%E5%BA%93-class%E7%B1%BB/">Java基础类库-Class类</a>
+            </li>
+            <li>
+                <a href="/%E5%BA%8F%E5%88%97%E5%8C%96/">序列化</a>
+            </li>
+            <li>
+                <a href="/java%E9%9B%86%E5%90%88-setlistmap/">Java集合-Set、List、Map</a>
+            </li>
+            <li>
+                <a href="/java%E9%9B%86%E5%90%88/">Java集合</a>
+            </li>
+            <li>
+                <a href="/java%E5%9F%BA%E7%A1%80%E7%B1%BB%E5%BA%93-string%E7%B1%BB/">Java基础类库-String类</a>
+            </li>
+            <li>
+                <a href="/java%E5%AD%90%E7%B1%BB%E7%88%B6%E7%B1%BB%E8%BD%AC%E6%8D%A2/">Java子类父类转换</a>
+            </li>
+            <li>
+                <a href="/java%E5%9F%BA%E7%A1%80%E7%B1%BB%E5%BA%93-object%E7%B1%BB/">Java基础类库-Object类</a>
+            </li>
+            <li>
+                <a href="/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/">时间复杂度</a>
+            </li>
+        </ul>
+    </aside>
+
+    <aside class="widget widget_archive">
+        <h2>Archives</h2>
+        <ul>
+        </ul>
+    </aside>
+
+</div>
+        </div>
+        </div>
+<footer role="contentinfo" class="document-footer contentinfo widgets columns-1">
+
+    <aside class="widget widget_text">
+        <div class="textwidget">
+            <p>© Cocloa is looking at the Piano / Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> with theme <a href="https://github.com/tosi29/inkblotty" target="_blank">Inkblotty</a></p>
+        </div>
+    </aside>
+</footer>
+</div>
+
+    </body>
+</html>

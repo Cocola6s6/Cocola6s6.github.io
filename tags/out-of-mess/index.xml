@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>out of mess on Cocloa is looking at the Piano</title>
+    <link>https://cocola6s6.github.io/tags/out-of-mess/</link>
+    <description>Recent content in out of mess on Cocloa is looking at the Piano</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 21 Jun 2020 08:09:01 +0800</lastBuildDate><atom:link href="https://cocola6s6.github.io/tags/out-of-mess/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>索引</title>
+      <link>https://cocola6s6.github.io/%E7%B4%A2%E5%BC%95/</link>
+      <pubDate>Sun, 21 Jun 2020 08:09:01 +0800</pubDate>
+      
+      <guid>https://cocola6s6.github.io/%E7%B4%A2%E5%BC%95/</guid>
+      <description>背景知识 - 数据库的性能问题 磁盘IO性能非常低，严重的影响数据库系统的性能。 磁盘顺序读写比随机读写的性能高很多。 - 数据的基本存储结构 磁盘空间被划分为许多大小相同的块（Block）或者页(Page). 一个表的这些数据块以链表的方式串联在一起。 数据是以行（Row）为单位一行一行的存放在磁盘上的块中,如图所</description>
+    </item>
+    
+    <item>
+      <title>数据查询</title>
+      <link>https://cocola6s6.github.io/%E6%95%B0%E6%8D%AE%E6%9F%A5%E8%AF%A2/</link>
+      <pubDate>Sat, 20 Jun 2020 17:33:05 +0800</pubDate>
+      
+      <guid>https://cocola6s6.github.io/%E6%95%B0%E6%8D%AE%E6%9F%A5%E8%AF%A2/</guid>
+      <description>数据查询 学生表：Student(Sno, Sname, Ssex, Sage, Sdept) 课程表：Course(Cno, Cname, Cpno, Ccredit) 学生选课表：SC(Sno, Cno, Grade) Sdept：院系、Cpno：先修课、Ccredit：学分 单表查询 1.选择表中若干列 查询指定列：SELECT Sno, Sname FROM Student; 查询全部列：SELECT * FROM Student; 查询经过计算的值：SELECT Sname, 2014-Sage FROM Student; se</description>
+    </item>
+    
+    <item>
+      <title>观察者模式</title>
+      <link>https://cocola6s6.github.io/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/</link>
+      <pubDate>Thu, 04 Jun 2020 13:51:50 +0800</pubDate>
+      
+      <guid>https://cocola6s6.github.io/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/</guid>
+      <description>观察者模式 一、为什么？ 如何在老板不在时开小差又不被发现？于是就请前台的小美帮忙，如果老板出门后回来，就打个电话进来，大家也好马上各就各位，这样就不会被老板发现问题了。 ”观察者模式的关键对象是主题Subject和观察者Observer；**一个Subject可以有任意数目的依赖它Observer，一旦</description>
+    </item>
+    
+    <item>
+      <title>策略模式结合简单工厂模式</title>
+      <link>https://cocola6s6.github.io/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F%E7%BB%93%E5%90%88%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</link>
+      <pubDate>Wed, 03 Jun 2020 13:33:09 +0800</pubDate>
+      
+      <guid>https://cocola6s6.github.io/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F%E7%BB%93%E5%90%88%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</guid>
+      <description>策略模式与简单工厂模式结合 一、为什么？ “难道简单工厂就一定要是一个单独的类吗?难道不可以与策略模式的Context结合?” 于是，将客户端判断代码搬运到Context构造器中，客户端传入需要的”收费方式字符串“就可以了。 二、策略模式与简单工厂模式结合 1）Context类代码： class CashContext { CashSuper cs = null; public CashContext(string type) { switch (type)</description>
+    </item>
+    
+    <item>
+      <title>策略模式</title>
+      <link>https://cocola6s6.github.io/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/</link>
+      <pubDate>Wed, 03 Jun 2020 13:30:04 +0800</pubDate>
+      
+      <guid>https://cocola6s6.github.io/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/</guid>
+      <description>策略模式 一、为什么？ 商场收银时如何促销，用打折还是返利，其实都是一些算法，用工厂来生成算法对象，这没有错，但算法本身只是一种策略，最重要的是这些算法是随时都可能互相替换的，这就是变化点，而封装变化点是我们面向对象的一种 很重要的思维方式。 简单工厂模式只是解决对象的创建问题，由于“工厂”本身包括了所有的</description>
+    </item>
+    
+    <item>
+      <title>4号杯</title>
+      <link>https://cocola6s6.github.io/4%E5%8F%B7%E6%9D%AF/</link>
+      <pubDate>Thu, 02 Jan 2020 15:02:36 +0800</pubDate>
+      
+      <guid>https://cocola6s6.github.io/4%E5%8F%B7%E6%9D%AF/</guid>
+      <description>呵！</description>
+    </item>
+    
+    <item>
+      <title>版本控制介绍</title>
+      <link>https://cocola6s6.github.io/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E4%BB%8B%E7%BB%8D/</link>
+      <pubDate>Fri, 20 Dec 2019 22:50:42 +0800</pubDate>
+      
+      <guid>https://cocola6s6.github.io/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E4%BB%8B%E7%BB%8D/</guid>
+      <description>目的 介绍版本控制前，知道以下常用的版本控制工具有git、SVN、HG、CVS和什么是版本控制？ 什么是版本控制？ 可以把一个版本控制系统（缩写VCS）理解为一个“数据库”，在需要的时候，它可以帮你完整地保存一个项目的快照。当你需要查看一个之前的快照（称之为“版本”）时，版本控制系统可以显示出当前版本与上</description>
+    </item>
+    
+    <item>
+      <title>Mavan构建工具</title>
+      <link>https://cocola6s6.github.io/mavan%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/</link>
+      <pubDate>Fri, 20 Dec 2019 22:43:51 +0800</pubDate>
+      
+      <guid>https://cocola6s6.github.io/mavan%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/</guid>
+      <description>目的 介绍构建工具make、Maven等之前，先介绍编程不可少的IDE，即集成开发环境；但是为什么基本上主流的IDE都是要集成构建工具呢？ IDE例子： 一般包括：编辑器+编译器+调试器（editor+compiler+debugger） 为什么会有构建工具？ 编译步骤一般包括：预处理、编译、汇编、链接；如果</description>
+    </item>
+    
+    <item>
+      <title>Keeping</title>
+      <link>https://cocola6s6.github.io/keeping/</link>
+      <pubDate>Mon, 16 Dec 2019 11:49:20 +0800</pubDate>
+      
+      <guid>https://cocola6s6.github.io/keeping/</guid>
+      <description>Thanks for thinking of me,but make the way for this man. 广告：作文征集 有一说一; 联系方式：QQ“绿色健康小清新”</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
+    <title>垃圾收集器和内存分配策略 - Cocloa is looking at the Piano</title>
+
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <link rel='stylesheet' href='https://cocola6s6.github.io/css/style.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='https://cocola6s6.github.io/css/custom.css' type='text/css' media='all' />
+        
+</head>
+    <body class="two-column">
+        <a href="#content">Skip to content</a>
+<div class="wrapper">
+    <header role="banner" class="banner widgets columns-1">
+        <a href="/" rel="home">
+            <h1 class="site">Cocloa is looking at the Piano</h1>
+            <p></p>
+        </a>
+        <nav role="navigation" aria-label="Primary Navigation">
+
+            <ul class="menu">
+                <li class="menu-item "><a class="menu__link" href="https://cocola6s6.github.io/keeping/">KEEPING</a></li>
+            </ul>
+            <select onChange="location.href=value;">
+                <option value="https://cocola6s6.github.io/keeping/" class="menu-item menu-item-type-custom menu-item-object-custom" >KEEPING</option>
+            </select>
+        </nav>
+    </header>
+
+    <br>
+    <div style="width: 100%; max-height: 100px; text-align: center;">
+       
+</div>
+
+    <div class="breadcrumbs">
+        
+    </div>
+        <div id="content" class="content">
+
+<main role="main">
+    <article role="article" class="post type-post format-standard hentry">
+        <header class="post-header">
+            <h1>垃圾收集器和内存分配策略</h1>
+            <div class="post-details">
+                <a rel="bookmark">
+                    <time datetime="2020-07-02T72:934:16">2020-07-02</time>
+                </a>
+				
+<span style="float: right;">
+    <div id="fb-root" style="height: 100%;"></div>
+    
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
+    
+    <div class="fb-share-button" data-href="https://cocola6s6.github.io/%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E5%99%A8%E5%92%8C%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D%E7%AD%96%E7%95%A5/" data-layout="button_count" data-size="small">
+        <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fcocola6s6.github.io%2f%25E5%259E%2583%25E5%259C%25BE%25E6%2594%25B6%25E9%259B%2586%25E5%2599%25A8%25E5%2592%258C%25E5%2586%2585%25E5%25AD%2598%25E5%2588%2586%25E9%2585%258D%25E7%25AD%2596%25E7%2595%25A5%2f" class="fb-xfbml-parse-ignore">Share</a>
+    </div>
+    &nbsp;
+    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="垃圾收集器和内存分配策略" data-url="https://cocola6s6.github.io/%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E5%99%A8%E5%92%8C%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D%E7%AD%96%E7%95%A5/" data-show-count="false">Tweet</a>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    &nbsp;
+    
+</span>
+
+            </div>
+        </header>
+
+        <div class="post-content">
+            <hr>
+<h1 id="垃圾收集器和内存分配策略">垃圾收集器和内存分配策略</h1>
+<p>Java与C++之间有一堵由内存动态分配和垃圾收集技术所围成的“高墙”，墙外面的人想进去，墙里面的人却想出来。</p>
+<p>垃圾收集（Garbage Collection）需考虑的 3 件事情：</p>
+<ul>
+<li>哪些内存需要回收？</li>
+<li>什么时候回收呢？</li>
+<li>如何回收？</li>
+</ul>
+<h2 id="gc-关注的内存">GC 关注的内存</h2>
+<p>程序计数器、虚拟机栈、本地方法栈3个区域随线程而生，随线程而灭；这几个区域的内存分配和回收都具备确定性，在这几个区域内就不需要过多考虑回收的问题，因为方法结束或者线程结束时，内存自然就跟随着回收了。</p>
+<p>而 Java 堆和方法区则不一样，一个接口中的多个实现类需要的内存可能不一样，一个方法中的多个分支需要的内存也可能不一样，我们只有在程序处于运行期间时才能知道会创建哪些对象，这部分内存的分配和回收都是动态的。GC 关注的就是这部分内存。</p>
+<h2 id="对象已死吗-">对象已死吗 ？</h2>
+<h3 id="1判断算法">1.判断算法</h3>
+<ul>
+<li>引用计数算法</li>
+<li>可达性分析算法</li>
+</ul>
+<h3 id="2再谈引用">2.再谈引用</h3>
+<p>JDK 1.2 以前，Java 中的引用的定义很传统：如果 reference 类型的数据中存储的数值代表的是另外一块内存的起 始 地址，就称这块内存代表着一个引用。这种定义下对象只有 “被引用” 或者 “没有被引用“ 两种状态，对于如何描述一些“食之无味，弃之可惜” 的对象就显得无能为力。</p>
+<p>我们希望能描述这样一类对象，当内存空间还足够时，则能保留在内存之中，如果内存空间在进行垃圾收集后还是非常紧张，则可以抛弃这些对象。很多系统的缓存功能都符合这样的应用场景。在 JDK 1.2 之后，Java 对引用的概念进行了扩充，将引用分为强引用 (Strong Reference)、软引用 (Soft Reference)、弱引用 ( Weak Reference)、 虚引用 ( Phantom Reference) 4 种，这 4 种引用强度依次逐渐减弱。</p>
+<h3 id="3再谈方法区">3.再谈方法区</h3>
+<p><strong>- 永久代的垃圾收集主要回收两部分内容：</strong></p>
+<ul>
+<li>废弃常量；</li>
+<li>无用的类；</li>
+</ul>
+<p>回收废弃常量与回收 Java 堆中的对象非常类似；以常量池中字面量的回收为例，假如一个字符串 “abc” 已经进人了常量池中，但是当前系统没有任何一个 String 对象是叫做 “abc&quot; 的，换句话说，就是没有任何 String 对象引用常量池中的 “abc&quot; 常量，也没有其他地方引用了这个字面量，如果这时发生内存回收，而且必要的话，这个 “abc&quot; 常量就会被系统清理出常量池。常量池中的其他类(接口)、方法、字段的符号引用也与此类似。</p>
+<p>回收无用类，这有的看不懂。</p>
+<h2 id="内存分配与回收策略">内存分配与回收策略</h2>
+<p>在了解了垃圾收集器体系后，再要了解的是如何给对象分配内存。</p>
+<p>对象的内存分配，往大方向讲，就是在堆上分配；</p>
+<ul>
+<li>主要分配在新生代的 Eden 区上；</li>
+<li>如果启动了本地线程分配缓冲 (TLAB) ，将按线程优先在 TLAB 上分配；</li>
+<li>少数情况下也可能会直接分配在老年代中；</li>
+</ul>
+<p>分配的规则并不是百分之百固定的，其细节取决于当前使用的是哪一种垃圾收集器组合，还有虚拟机中与内存相关的参数的设置。</p>
+<p><img src="https://github.com/OnlyThePiano/Notes/blob/master/images/image-20200720173647039.png" alt="image-20200720173647039"></p>
+<p><strong>- 分配策略：</strong></p>
+<ul>
+<li>对象优先在 Eden 分配；</li>
+<li>大对象直接进入老年代；</li>
+<li>长期存活的对象进入老年代；</li>
+<li>动态对象年龄判断；</li>
+<li>空间分配担保；</li>
+</ul>
+
+        </div>
+
+
+
+        <footer class="post-footer">
+                
+                
+                
+                <span class="post-categories">
+                        <a href="https://cocola6s6.github.io/categories/java/">Java</a>&emsp;
+                        
+                </span>
+                
+        
+                
+                
+                
+        </footer>
+        
+<table cellspacing="15" style="width:100%; border: none;">
+    <tr>
+        <td style="text-align: center; border: none; padding: 0px;">
+        </td>
+        <td style="text-align: center; border: none; padding: 0px;">
+        </td>
+    </tr>
+</table>
+
+        
+	
+	
+
+    </article>
+
+    
+    <nav class="navigation post-navigation" role="navigation">
+        <div class="nav-links">
+            <div class="nav-previous">
+                
+                <a class="previous" href="https://cocola6s6.github.io/string%E7%B1%BB%E5%92%8C%E5%B8%B8%E9%87%8F%E6%B1%A0/"> String类和常量池</a>
+                
+            </div>
+            <div class="nav-next">
+                
+                <a class="next" href="https://cocola6s6.github.io/java%E5%B9%B6%E5%8F%91-%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B2/"> Java并发-进程线程2</a>
+                
+            </div>
+        </div>
+    </nav>
+    <section>
+        
+    </section>
+    
+
+</main>
+
+
+        <div class="sidebar1 widgets columns-1">
+
+    <aside>
+    
+</aside>
+    <aside class="widget widget_categories">
+        <h2>Categories</h2>
+        <ul class="widget__list"><li class="cat-item cat-item-2">
+                <a href="https://cocola6s6.github.io/categories/git/">Git (9)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://cocola6s6.github.io/categories/hugo/">Hugo (2)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://cocola6s6.github.io/categories/java/">Java (18)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://cocola6s6.github.io/categories/mysql/">MySQL (9)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://cocola6s6.github.io/categories/uml/">UML (2)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://cocola6s6.github.io/categories/%E5%8F%AF%E4%B9%90/">可乐 (8)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://cocola6s6.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构 (2)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://cocola6s6.github.io/categories/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/">离散数学 (1)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://cocola6s6.github.io/categories/%E7%AE%97%E6%B3%95/">算法 (1)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://cocola6s6.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式 (13)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://cocola6s6.github.io/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/">软件工程 (2)</a>
+            </li>
+        </ul>
+    </aside>
+
+    <aside class="widget widget_tag_cloud">
+        <h2>Tags</h2>
+        <div class="tagcloud"><a class="tag-cloud-link" href="https://cocola6s6.github.io/tags/out-of-mess/" title="out-of-mess" style="font-size: 12pt;">out of mess</a>&emsp;<a class="tag-cloud-link" href="https://cocola6s6.github.io/tags/out-of-messy/" title="out-of-messy" style="font-size: 12pt;">out of messy</a>&emsp;
+        </div>
+    </aside>
+
+    <aside class="widget widget_recent_entries">
+        <h2>Recent Posts</h2>
+        <ul>
+            <li>
+                <a href="/%E6%B3%9B%E5%9E%8B/">泛型</a>
+            </li>
+            <li>
+                <a href="/8%E5%8F%B7%E6%9D%AF/">8号杯</a>
+            </li>
+            <li>
+                <a href="/java%E5%9F%BA%E7%A1%80%E7%B1%BB%E5%BA%93-class%E7%B1%BB/">Java基础类库-Class类</a>
+            </li>
+            <li>
+                <a href="/%E5%BA%8F%E5%88%97%E5%8C%96/">序列化</a>
+            </li>
+            <li>
+                <a href="/java%E9%9B%86%E5%90%88-setlistmap/">Java集合-Set、List、Map</a>
+            </li>
+            <li>
+                <a href="/java%E9%9B%86%E5%90%88/">Java集合</a>
+            </li>
+            <li>
+                <a href="/java%E5%9F%BA%E7%A1%80%E7%B1%BB%E5%BA%93-string%E7%B1%BB/">Java基础类库-String类</a>
+            </li>
+            <li>
+                <a href="/java%E5%AD%90%E7%B1%BB%E7%88%B6%E7%B1%BB%E8%BD%AC%E6%8D%A2/">Java子类父类转换</a>
+            </li>
+            <li>
+                <a href="/java%E5%9F%BA%E7%A1%80%E7%B1%BB%E5%BA%93-object%E7%B1%BB/">Java基础类库-Object类</a>
+            </li>
+            <li>
+                <a href="/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/">时间复杂度</a>
+            </li>
+        </ul>
+    </aside>
+
+    <aside class="widget widget_archive">
+        <h2>Archives</h2>
+        <ul>
+        </ul>
+    </aside>
+
+</div>
+        </div>
+        </div>
+<footer role="contentinfo" class="document-footer contentinfo widgets columns-1">
+
+    <aside class="widget widget_text">
+        <div class="textwidget">
+            <p>© Cocloa is looking at the Piano / Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> with theme <a href="https://github.com/tosi29/inkblotty" target="_blank">Inkblotty</a></p>
+        </div>
+    </aside>
+</footer>
+</div>
+
+    </body>
+</html>
