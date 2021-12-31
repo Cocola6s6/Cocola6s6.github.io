@@ -133,9 +133,9 @@
 <p>可以减少冗余记录的查询。在应用层做关联查询，意味着对于某条记录应用只需要查询一次,而在数据库中做关联查询,则可能需要重复地访问一部分数据。从这点看，这样的重构还可能会减少网络和内存的消耗。</p>
 </li>
 </ul>
-<p><img src="https://onlythepiano.github.io/images/image-20200619135127698.png" alt="image-20200619135127698"></p>
+<p><img src="https://cocola6s6.github.io/images/image-20200619135127698.png" alt="image-20200619135127698"></p>
 <h2 id="查询是如何执行的">查询是如何执行的？</h2>
-<p><img src="https://onlythepiano.github.io/images/image-20200619135537011.png" alt="image-20200619135537011"></p>
+<p><img src="https://cocola6s6.github.io/images/image-20200619135537011.png" alt="image-20200619135537011"></p>
 <ol>
 <li>客户端发送一条查询给服务器。</li>
 <li>服务器先检查查询缓存，如果命中了缓存，则立刻返回存储在缓存中的结果。否则进入下一阶段。</li>

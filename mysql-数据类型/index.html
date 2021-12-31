@@ -107,9 +107,9 @@
 <p>主要有 CHAR 和 VARCHAR 两种类型，一种是定长的，一种是变长的。</p>
 <p>VARCHAR 这种变长类型能够节省空间，因为只需要存储必要的内容。但是在执行 UPDATE 时可能会使行变得比原来长，当超出一个页所能容纳的大小时，就要执行额外的操作。MyISAM 会将行拆成不同的片段存储，而 InnoDB 则需要分裂页来使行放进页内。</p>
 <p>在进行存储和检索时，不同存储引擎都一样，会保留 VARCHAR 末尾的空格，而会删除 CHAR 末尾的空格。</p>
-<p><img src="https://onlythepiano.github.io/images/image-20200619093432815.png" alt="image-20200619093432815"></p>
-<p><img src="https://onlythepiano.github.io/images/image-20200619093514289.png" alt="image-20200619093514289"></p>
-<p><img src="https://onlythepiano.github.io/images/image-20200619093622950.png" alt="image-20200619093622950"></p>
+<p><img src="https://cocola6s6.github.io/images/image-20200619093432815.png" alt="image-20200619093432815"></p>
+<p><img src="https://cocola6s6.github.io/images/image-20200619093514289.png" alt="image-20200619093514289"></p>
+<p><img src="https://cocola6s6.github.io/images/image-20200619093622950.png" alt="image-20200619093622950"></p>
 <p>与CHAR和VARCHAR类似的类型还有BINARY和VARBINARY,它们存储的是二进制字符串；二进制字符串存储的是字节码而不是字符。填充不一样：MySQL填充BINARY采用的是\0 (零字节)而不是空格。
 MySQL比较BINARY字符串时，每次按一一个字节， 并且根据该字节的数值进行比较。因此，二进制比较比字符比较简单很多，所以也就更快。</p>
 <h2 id="时间和日期类型">时间和日期类型</h2>

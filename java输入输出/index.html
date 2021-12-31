@@ -140,14 +140,14 @@
 <li>可以从向一个特定的 IO 设备(如磁盘、网络)读/写数据的流，称为节点流，节点流也被称为低级流。</li>
 <li>处理流则用于对一个已存在的流进行连接或封装，通过封装后的流来实现数据读/写功能。处理流也被称为高级流。</li>
 </ul>
-<p><img src="https://onlythepiano.github.io/images/image-20200622091326480.png" alt="image-20200622091326480"></p>
+<p><img src="https://cocola6s6.github.io/images/image-20200622091326480.png" alt="image-20200622091326480"></p>
 <p>Java 使用处理流来包装节点流是一种典型的装饰器设计模式，通过使用处理流来包装不同的节点流，既可以消除不同节点流的实现差异，也可以提供更方便的方法来完成输入/输出功能。因此处理流也被称为包装流。</p>
-<p><img src="https://onlythepiano.github.io/images/image-20200622092000795.png" alt="image-20200622092000795"></p>
+<p><img src="https://cocola6s6.github.io/images/image-20200622092000795.png" alt="image-20200622092000795"></p>
 <h2 id="字节流和字符流">字节流和字符流</h2>
 <p>计算机的文件常被分为文本文件和二进制文件两大类一所有 能用记事本打开并看到其中字符内容的文件称为文本文件，反之则称为二进制文件。但实质是，计算机里的所有文件都是二进制文件，文本文件只是二进制文件的一种特例，当二进制文件里的内容恰好能被正常解析成字符时，则该二进制文件就变成了文本文件。</p>
 <p>如果进行输入/输出的内容是文本内容，则应该考虑使用字符流；如果进行输入/输出的内容是二进制内容，则应该考虑使用字节流。</p>
 <p><strong>- 常用流分类：</strong></p>
-<p><img src="https://onlythepiano.github.io/images/image-20200622104231846.png" alt="image-20200622104231846"></p>
+<p><img src="https://cocola6s6.github.io/images/image-20200622104231846.png" alt="image-20200622104231846"></p>
 <p><strong>再来了解一下中英文字符对应的字节数差别！</strong></p>
 <p><strong>- 英文字符：</strong></p>
 <table>
@@ -297,7 +297,7 @@
 <h3 id="3处理流">3.处理流</h3>
 <p>为了简化编程。</p>
 <p>处理流执行效率更高。</p>
-<p><img src="https://onlythepiano.github.io/images/image-20200622101808236.png" alt="image-20200622101808236"></p>
+<p><img src="https://cocola6s6.github.io/images/image-20200622101808236.png" alt="image-20200622101808236"></p>
 <p><strong>- 处理流之 PrintStream 类</strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">//包装输出流
 </span><span style="color:#75715e"></span>PrintStream ps <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> PrintStream<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> FileOutoutStream<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;test2.java&#34;</span><span style="color:#f92672">));</span>

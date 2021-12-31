@@ -121,7 +121,7 @@
 </li>
 </ul>
 <h3 id="2-泛型例子">2. 泛型例子：</h3>
-<p><img src="https://onlythepiano.github.io/images/image-20200613110339981.png" alt="image-20200613110339981"></p>
+<p><img src="https://cocola6s6.github.io/images/image-20200613110339981.png" alt="image-20200613110339981"></p>
 <p>这样子，初始化对象时，调用构造函数并传入想要的形参类型，就能多出一个该类型的类对象。</p>
 <p>**注意：**泛型通过构造器的定义方式</p>
 <ul>
@@ -138,9 +138,9 @@
 </li>
 </ul>
 <p><strong>(1) 父类Apple为String类型：</strong></p>
-<p><img src="https://onlythepiano.github.io/images/image-20200613110954391.png" alt="image-20200613110954391"></p>
+<p><img src="https://cocola6s6.github.io/images/image-20200613110954391.png" alt="image-20200613110954391"></p>
 <p><strong>(2) 默认为Object类型：</strong></p>
-<p><img src="https://onlythepiano.github.io/images/image-20200613111936186.png" alt="image-20200613111936186"></p>
+<p><img src="https://cocola6s6.github.io/images/image-20200613111936186.png" alt="image-20200613111936186"></p>
 <p><strong>(3) 这里又说一下，重写父类的原则：“两同两小一大”</strong></p>
 <ul>
 <li>方法名同、形参列表同；</li>
@@ -154,7 +154,7 @@ List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&g
 <span style="color:#75715e">//事实上，l1、l2是相等的
 </span></code></pre></div><p>不管为泛型的类型形参传入哪一种类型实参， 对于Java来说，它们依然被当成同一个类处理，在内存中也只占用一块内存空间，因此在静态方法、静态初始化块或者静态变量的声明和初始化中不允许使用类型形参。</p>
 <p><strong>注意：</strong> 在静态方法、静态初始化块或者静态变量的声明和初始化中不允许使用类型形参
-<img src="https://onlythepiano.github.io/images/image-20200613160812835.png" alt="image-20200613160812835"></p>
+<img src="https://cocola6s6.github.io/images/image-20200613160812835.png" alt="image-20200613160812835"></p>
 <h2 id="二使用类型通配符">二、使用类型通配符</h2>
 <p><strong>- 为什么要使用类型通配符 ？</strong></p>
 <p>当使用一个泛型类时都应该为这个泛型类传入类型参数，否则编译器会提出警告；Object 类是任何类的父类，但是我们并不能将它作为泛型的参数时却达不到可以作为任何泛型类的父类的作用，因为对于泛型而言，   <code>List&lt;String&gt;</code> 对象不能被当成 <code>List&lt;Object&gt;</code> 对象使用。</p>
@@ -184,7 +184,7 @@ List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt
 <pre tabindex="0"><code>T extends Number &amp; Comparable&lt;T&gt;	:	表明T类型必须是Number类或其子类, 而且必须实现Comparable接口
 </code></pre><h2 id="四泛型方法">四、泛型方法</h2>
 <p>泛型方法的定义格式如下：</p>
-<p><img src="https://onlythepiano.github.io/images/image-20200613162331552.png" alt="image-20200613162331552"></p>
+<p><img src="https://cocola6s6.github.io/images/image-20200613162331552.png" alt="image-20200613162331552"></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">这个T类型形参就可以在该方法内当成普通类型使用<span style="color:#960050;background-color:#1e0010">。</span>
 <span style="color:#66d9ef">static</span> <span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">fromArrayToCollection</span><span style="color:#f92672">(</span>T<span style="color:#f92672">[]</span> a<span style="color:#f92672">,</span> Collection<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> c<span style="color:#f92672">)</span> <span style="color:#f92672">{}</span>
 

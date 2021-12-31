@@ -96,7 +96,7 @@ System.out.println(str2==str3);//false
 <li>第二种方式是直接在堆内存空间创建一个新的对象。</li>
 <li>只要使用 new 方法，便需要创建新的对象。</li>
 </ul>
-<p><img src="https://onlythepiano.github.io/images/image-20200702203236129.png" alt="image-20200702203236129"></p>
+<p><img src="https://cocola6s6.github.io/images/image-20200702203236129.png" alt="image-20200702203236129"></p>
 <p><strong>- String 类型的常量池比较特殊。它的主要使用方法有两种：</strong></p>
 <ul>
 <li>直接使用双引号声明出来的 String 对象会直接存储在常量池中。</li>
@@ -119,7 +119,7 @@ String str5 = &quot;string&quot;;//常量池中的对象
 System.out.println(str3 == str4);//false
 System.out.println(str3 == str5);//true
 System.out.println(str4 == str5);//false
-</code></pre><p><img src="https://onlythepiano.github.io/images/image-20200702203427485.png" alt="image-20200702203427485"></p>
+</code></pre><p><img src="https://cocola6s6.github.io/images/image-20200702203427485.png" alt="image-20200702203427485"></p>
 <h2 id="8-种基本类型的包装类和常量池">8 种基本类型的包装类和常量池</h2>
 <p>Java 基本类型的包装类的大部分都实现了常量池技术，即 Byte,Short,Integer,Long,Character,Boolean；前面 4 种包装类默认创建了数值 [-128，127] 的相应类型的缓存数据，Character 创建了数值在 [0,127] 范围的缓存数据，Boolean 直接返回 True Or False。如果超出对应范围仍然会去创建新的对象。</p>
 <p>两种浮点数类型的包装类 Float,Double 并没有实现常量池技术。</p>

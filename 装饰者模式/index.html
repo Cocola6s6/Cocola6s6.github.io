@@ -87,7 +87,7 @@
 <p>与建筑者模式不同的是，建筑的过程是稳定的；这里来说，如果衣服的搭配是稳定的就会，搭配方式1（大T恤、大跨库）和搭配方式2（小T恤、小垮裤）等。</p>
 <p>那么怎么才能让它们自由搭配，而不是”套餐式“搭配呢？？？？？</p>
 <h2 id="二面向对象编程">二、面向对象编程</h2>
-<p><img src="https://onlythepiano.github.io/images/image-20200623133133818.png" alt="image-20200623133133818"></p>
+<p><img src="https://cocola6s6.github.io/images/image-20200623133133818.png" alt="image-20200623133133818"></p>
 <h3 id="客户端代码">客户端代码：</h3>
 <pre tabindex="0"><code>Person p = new Person();
 Finery t = new TShirts();
@@ -102,9 +102,9 @@ s.Show();
 <h2 id="三装饰者模式">三、装饰者模式</h2>
 <p>装饰模式，它把每个要装饰的功能放在单独的类中，并让这个类包装它所要装饰的对象，因此，当需要执行特殊行为时，客户代码就可以在运行时根据需要有选择地、按顺序地使用装饰功能包装对象了。</p>
 <p>“通过装饰，可以让你全副武装到牙齿，也可以让你只挂一丝到内裤。”</p>
-<p><img src="https://onlythepiano.github.io/images/image-20200622234538187.png" alt="image-20200622234538187"></p>
+<p><img src="https://cocola6s6.github.io/images/image-20200622234538187.png" alt="image-20200622234538187"></p>
 <h3 id="1例子衣服搭配">1）例子（衣服搭配）：</h3>
-<p><img src="https://onlythepiano.github.io/images/image-20200622234452828.png" alt="image-20200622234452828"></p>
+<p><img src="https://cocola6s6.github.io/images/image-20200622234452828.png" alt="image-20200622234452828"></p>
 <h3 id="2服饰类decorator">2）服饰类（Decorator）：</h3>
 <p>注意：protected Person component；</p>
 <p>这里 “聚合关系” 的实现，当然也可以和责任链模式一样，在父类声明自身类型的变量给子类继承后调用父类的方法。</p>
@@ -156,7 +156,7 @@ s.Decorate(b);
 //装饰结束,递归输出
 s.show();
 </code></pre><p><strong>-装饰过程：</strong></p>
-<p><img src="https://onlythepiano.github.io/images/image-20200623101518322.png" alt="image-20200623101518322"></p>
+<p><img src="https://cocola6s6.github.io/images/image-20200623101518322.png" alt="image-20200623101518322"></p>
 <h3 id="5解释">5）解释：</h3>
 <p><strong>- 原则：</strong></p>
 <ul>
