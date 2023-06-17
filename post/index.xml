@@ -98,15 +98,6 @@
     </item>
     
     <item>
-      <title>7号杯</title>
-      <link>https://cocola6s6.github.io/7%E5%8F%B7%E6%9D%AF/</link>
-      <pubDate>Sun, 05 Jul 2020 22:13:55 +0800</pubDate>
-      
-      <guid>https://cocola6s6.github.io/7%E5%8F%B7%E6%9D%AF/</guid>
-      <description>！ 害！</description>
-    </item>
-    
-    <item>
       <title>桥接模式</title>
       <link>https://cocola6s6.github.io/%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/</link>
       <pubDate>Sat, 04 Jul 2020 20:36:08 +0800</pubDate>
@@ -238,7 +229,7 @@
       <pubDate>Mon, 22 Jun 2020 08:21:50 +0800</pubDate>
       
       <guid>https://cocola6s6.github.io/6%E5%8F%B7%E6%9D%AF/</guid>
-      <description>惊！ NULL 广告：作文征集 明天有素材？后天有素材？期待你们的分享😄 联系方式：QQ“绿色健康小清新” 目的 每次 git 上传博客到 github pages 时都要一一修改图片的地址，很麻烦了。 图片地址修改 利用 Java File 类对文件读取和写入和 String 类的 replaceAll() 方法替换。 输入输出都是文本内容，所以使用字符流。 BufferedReader.readLine() 方法，可以一次读入一行的内容，方便读取输入流文本内</description>
+      <description>目的 每次 git 上传博客到 github pages 时都要一一修改图片的地址，很麻烦了。 图片地址修改 利用 Java File 类对文件读取和写入和 String 类的 replaceAll() 方法替换。 输入输出都是文本内容，所以使用字符流。 BufferedReader.readLine() 方法，可以一次读入一行的内容，方便读取输入流文本内容。 public class ChangePath { String target; String src; String path; public ChangePath(String path, String target, String src) { this.path = path; this.target = target; this.src = src; } private void changeText(File fileText, String target, String src) { BufferedReader br = null; PrintWriter pw =</description>
     </item>
     
     <item>
@@ -386,15 +377,6 @@
     </item>
     
     <item>
-      <title>4号杯</title>
-      <link>https://cocola6s6.github.io/4%E5%8F%B7%E6%9D%AF/</link>
-      <pubDate>Thu, 02 Jan 2020 15:02:36 +0800</pubDate>
-      
-      <guid>https://cocola6s6.github.io/4%E5%8F%B7%E6%9D%AF/</guid>
-      <description>呵！</description>
-    </item>
-    
-    <item>
       <title>版本控制介绍</title>
       <link>https://cocola6s6.github.io/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E4%BB%8B%E7%BB%8D/</link>
       <pubDate>Fri, 20 Dec 2019 22:50:42 +0800</pubDate>
@@ -445,7 +427,7 @@
       <pubDate>Sun, 15 Dec 2019 21:42:16 +0800</pubDate>
       
       <guid>https://cocola6s6.github.io/3%E5%8F%B7%E6%9D%AF/</guid>
-      <description>A sense of family responsibility ​ As we grow up and our parents grow older, we have to realize that a sense of family responsibility should pay an important role in dealing with our family members. ​ One the one hand, we should notice that it was our family that gave us life, raised us up and made us who we are today. ​ One the other hand, being responsibility for our family is undoubtedly a necessary value should be shared by all of us Chinese and passed on to the next generations. 荷花骄阳不惧、出淤泥而不染： Lotus, it does not fear the strong sunshine and keeps clean in the dirty soil. 广告：作文征集 有一说一，没素材停更了 联系方式：QQ“绿色</description>
+      <description>Windows、Linux系统目录 在Windows操作系统中，是先将物理地址分开，再在分区上建立目录.在Windows操作系统中，所有路径都是从盘符开始，如C://program file。 Linux正好相反，是先有目录，再将物理地址映射到目录中。在Linux操作系统中，所有路径都是从根目录开始。Li</description>
     </item>
     
     <item>
@@ -454,7 +436,7 @@
       <pubDate>Mon, 09 Dec 2019 20:56:50 +0800</pubDate>
       
       <guid>https://cocola6s6.github.io/2%E5%8F%B7%E6%9D%AF/</guid>
-      <description>惊！ 2019年12月09日，比悲伤更悲伤的故事发生了啊 1000奖金去火锅，没有我，😔 官宣，可惜不是我，😔 广告：作文征集 明天有素材？后天有素材？期待你们的分享😄 联系方式：QQ“绿色健康小清新” 目标 依赖关系和包含关系；依赖关系和关联关系时类图最常见的关系，不能区分关系就会使得一整个类图都是同一种关系，很</description>
+      <description>目标 依赖关系和包含关系；依赖关系和关联关系时类图最常见的关系，不能区分关系就会使得一整个类图都是同一种关系，很明显这样的一个类图是，，，错的吧。 依赖关系和包含关系 举例：删除操作，如果查询类改变的话，删除类会受到影响吗？查询类是独立的，但是删除类要依赖于查询类； 包含关系是特殊的依赖关系；而包含关系的理</description>
     </item>
     
     <item>
@@ -472,7 +454,7 @@
       <pubDate>Sat, 07 Dec 2019 14:25:18 +0800</pubDate>
       
       <guid>https://cocola6s6.github.io/1%E5%8F%B7%E6%9D%AF/</guid>
-      <description>惊！ 广告：作文征集 要求1：文章开头必须有引言；文中不得出现具体的人名、宿舍名等；字体颜色VIP渐变； 要求2：有过TangTou项目经验优先原则； 联系方式：QQ“绿色健康小清新” GitHub项目查找笔记 in:name example 名字中有“example” in:readme example readme中有“example” in:description example 描述中有“example” stars:&amp;gt;1000</description>
+      <description>GitHub项目查找笔记 in:name example 名字中有“example” in:readme example readme中有“example” in:description example 描述中有“example” stars:&amp;gt;1000 star&amp;gt;1000 forks:&amp;gt;1000 fork&amp;gt;1000 pushed:&amp;gt;2019-09-01 2019年9月1日后有更新的 language:java Hugo hugo server &amp;ndash;theme=&amp;ldquo;inkblotty&amp;rdquo; &amp;ndash;buildDrafts 部署时可以实时地查看网页效果 hugo --theme=&amp;#34;inkblotty&amp;#34; --baseUrl=&amp;#34;https://cocola6s6.github.io/&amp;#34; --buildDrafts 生成public/文件</description>
     </item>
     
     <item>

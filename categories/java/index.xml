@@ -130,7 +130,7 @@
       <pubDate>Mon, 22 Jun 2020 08:21:50 +0800</pubDate>
       
       <guid>https://cocola6s6.github.io/6%E5%8F%B7%E6%9D%AF/</guid>
-      <description>惊！ NULL 广告：作文征集 明天有素材？后天有素材？期待你们的分享😄 联系方式：QQ“绿色健康小清新” 目的 每次 git 上传博客到 github pages 时都要一一修改图片的地址，很麻烦了。 图片地址修改 利用 Java File 类对文件读取和写入和 String 类的 replaceAll() 方法替换。 输入输出都是文本内容，所以使用字符流。 BufferedReader.readLine() 方法，可以一次读入一行的内容，方便读取输入流文本内</description>
+      <description>目的 每次 git 上传博客到 github pages 时都要一一修改图片的地址，很麻烦了。 图片地址修改 利用 Java File 类对文件读取和写入和 String 类的 replaceAll() 方法替换。 输入输出都是文本内容，所以使用字符流。 BufferedReader.readLine() 方法，可以一次读入一行的内容，方便读取输入流文本内容。 public class ChangePath { String target; String src; String path; public ChangePath(String path, String target, String src) { this.path = path; this.target = target; this.src = src; } private void changeText(File fileText, String target, String src) { BufferedReader br = null; PrintWriter pw =</description>
     </item>
     
     <item>
